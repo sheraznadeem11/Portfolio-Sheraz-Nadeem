@@ -1,0 +1,28 @@
+<svg width="560" height="700" viewBox="0 0 560 700" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg1" x1="60" y1="40" x2="500" y2="680" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#EEF2FF"/>
+      <stop offset="0.5" stop-color="#DDE7FF"/>
+      <stop offset="1" stop-color="#C8E7FF"/>
+    </linearGradient>
+    <linearGradient id="shirt" x1="170" y1="300" x2="420" y2="620" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#3E4BD8"/>
+      <stop offset="1" stop-color="#2B2F8A"/>
+    </linearGradient>
+  </defs>
+  <rect width="560" height="700" rx="40" fill="url(#bg1)"/>
+  <circle cx="280" cy="210" r="120" fill="#F4D7C8"/>
+  <path d="M185 205C185 136.482 239.482 82 308 82C376.518 82 431 136.482 431 205V220C431 288.518 376.518 343 308 343H260C214.183 343 177 305.817 177 260V205H185Z" fill="#1F2335"/>
+  <path d="M207 223C207 166.267 253.267 120 310 120C366.733 120 413 166.267 413 223V246C413 302.733 366.733 349 310 349H258C226.52 349 201 323.48 201 292V223H207Z" fill="#191E2B"/>
+  <path d="M195 620C195 536.486 259.486 472 343 472H384C450.274 472 504 525.726 504 592V625C504 649.301 484.301 669 460 669H221C205.536 669 193 656.464 193 641V620H195Z" fill="url(#shirt)"/>
+  <path d="M80 620C80 536.486 144.486 472 228 472H269C335.274 472 389 525.726 389 592V625C389 649.301 369.301 669 345 669H106C90.536 669 78 656.464 78 641V620H80Z" fill="url(#shirt)"/>
+  <path d="M252 255C252 240.641 263.641 229 278 229H330C344.359 229 356 240.641 356 255V268C356 282.359 344.359 294 330 294H278C263.641 294 252 282.359 252 268V255Z" fill="#F4D7C8"/>
+  <path d="M240 220C240 180.235 272.235 148 312 148C351.765 148 384 180.235 384 220V227H240V220Z" fill="#1F2335"/>
+  <path d="M255 364C279.5 391.5 301.5 394.5 324 364" stroke="#C68E75" stroke-width="11" stroke-linecap="round"/>
+  <circle cx="260" cy="249" r="7" fill="#1A1B24"/>
+  <circle cx="326" cy="249" r="7" fill="#1A1B24"/>
+  <path d="M258 290C272 307 291 316 312 316C333 316 352 307 365 290" stroke="#C68E75" stroke-width="12" stroke-linecap="round"/>
+  <rect x="140" y="118" width="120" height="32" rx="16" fill="#fff" fill-opacity="0.4"/>
+  <rect x="300" y="98" width="98" height="30" rx="15" fill="#fff" fill-opacity="0.32"/>
+  <text x="280" y="655" text-anchor="middle" fill="#1F2A58" font-family="Arial, sans-serif" font-size="42" font-weight="700">SHERAZ</text>
+</svg>
