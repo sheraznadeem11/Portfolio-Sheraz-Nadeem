@@ -23,6 +23,6 @@ http://localhost:3000
 
 ## Notes
 
-- The loader initially displays `IRFAN MALIK` to match the reference aesthetic.
-- After a short animation, the page transitions to `SHERAZ NADEEM`.
-- Replace `assets/profile-sheraz.svg` with your real image any time.
+- The loader displays `SHERAZ NADEEM`.
+- Replace `assets/profile-sheraz.svg` with your own photo, or update the image `src` in `index.html`.
+- Product cards are demo content and can be edited directly in `index.html`.
