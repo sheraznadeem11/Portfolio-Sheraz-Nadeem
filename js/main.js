@@ -30,18 +30,34 @@ if (!reducedMotion && finePointer) {
     let ringY = 0;
     let animationFrame = 0;
     let cursorInitialized = false;
+    let lastFrameTime = 0;
 
-    const followPointer = () => {
-      ringX += (targetX - ringX) * 0.16;
-      ringY += (targetY - ringY) * 0.16;
+    const followPointer = (time) => {
+      const frameScale = lastFrameTime ? Math.min((time - lastFrameTime) / 16.67, 2) : 1;
+      lastFrameTime = time;
+      const easing = 1 - Math.pow(0.78, frameScale);
+      const previousX = ringX;
+      const previousY = ringY;
+      ringX += (targetX - ringX) * easing;
+      ringY += (targetY - ringY) * easing;
       cursorRing.style.left = `${ringX}px`;
       cursorRing.style.top = `${ringY}px`;
+
+      const velocityX = ringX - previousX;
+      const velocityY = ringY - previousY;
+      const speed = Math.hypot(velocityX, velocityY);
+      if (speed > 0.05) {
+        cursorRing.style.setProperty('--cursor-angle', `${Math.atan2(velocityY, velocityX)}rad`);
+      }
+      cursorRing.style.setProperty('--cursor-stretch', `${1 + Math.min(speed / 50, 0.4)}`);
 
       if (Math.abs(targetX - ringX) > 0.2 || Math.abs(targetY - ringY) > 0.2) {
         animationFrame = window.requestAnimationFrame(followPointer);
       } else {
         cursorRing.style.left = `${targetX}px`;
         cursorRing.style.top = `${targetY}px`;
+        cursorRing.style.setProperty('--cursor-stretch', '1');
+        lastFrameTime = 0;
         animationFrame = 0;
       }
     };
