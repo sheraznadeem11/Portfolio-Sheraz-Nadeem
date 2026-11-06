@@ -1,32 +1,34 @@
-# Sheraz Nadeem Portfolio Demo
+# Sheraz Nadeem Portfolio
 
-This project recreates a premium AI expert portfolio landing page with a branded loader, hero section, stats, services, process, products, testimonials, and contact CTA.
+React portfolio built with Vite and Tailwind CSS.
 
-## Structure
+## Requirements
 
-- `index.html` – main page markup
-- `css/styles.css` – styling and responsive layout
-- `js/main.js` – loader animation and small script behavior
-- `assets/sheraz-nadeem.png` – profile photo
+- Node.js 20.19+ or 22.12+
+- npm
 
-## Run locally
+## Start the development server
 
 ```bash
-python3 -m http.server 3000
+npm install
+npm run dev
 ```
 
-Then open:
+Open the URL printed by Vite (by default, `http://localhost:5173`) in Chrome.
 
-```text
-http://localhost:3000
+## Production build
+
+```bash
+npm run build
+npm run preview
 ```
 
-## Notes
+## Project structure
 
-- The loader displays `SHERAZ NADEEM`.
-- Replace `assets/sheraz-nadeem.png` with an updated photo, or change the image `src` in `index.html`.
-- Product cards are demo content and can be edited directly in `index.html`.
-- A trailing custom cursor appears on mouse/trackpad devices; touch devices use their native cursor behavior.
-- The hero tagline has a ripple animation, and the centered navigation includes a `#products` anchor.
-- Sections reveal as you scroll, and the bottom-right button tracks page progress and scrolls back to the top.
-- Animations respect the operating system's reduced-motion preference.
+- `src/App.jsx` – React page sections and interactive UI
+- `src/main.jsx` – React application entry point
+- `src/index.css` – Tailwind layers and animation styles
+- `tailwind.config.js` – Tailwind theme and content paths
+- `assets/sheraz-nadeem.png` – profile photo
+
+The page includes a custom pointer animation, animated hero ripple, scroll reveal effects, responsive navigation, and reduced-motion support.
