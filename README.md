@@ -26,3 +26,6 @@ http://localhost:3000
 - The loader displays `SHERAZ NADEEM`.
 - Replace `assets/profile-sheraz.svg` with your own photo, or update the image `src` in `index.html`.
 - Product cards are demo content and can be edited directly in `index.html`.
+- A trailing custom cursor appears on mouse/trackpad devices; touch devices use their native cursor behavior.
+- Sections reveal as you scroll, and the bottom-right button tracks page progress and scrolls back to the top.
+- Animations respect the operating system's reduced-motion preference.
