@@ -24,12 +24,45 @@ if (!reducedMotion && finePointer) {
 
   if (cursorDot && cursorRing) {
     document.body.classList.add('custom-cursor-active');
+    let targetX = 0;
+    let targetY = 0;
+    let ringX = 0;
+    let ringY = 0;
+    let animationFrame = 0;
+    let cursorInitialized = false;
+
+    const followPointer = () => {
+      ringX += (targetX - ringX) * 0.16;
+      ringY += (targetY - ringY) * 0.16;
+      cursorRing.style.left = `${ringX}px`;
+      cursorRing.style.top = `${ringY}px`;
+
+      if (Math.abs(targetX - ringX) > 0.2 || Math.abs(targetY - ringY) > 0.2) {
+        animationFrame = window.requestAnimationFrame(followPointer);
+      } else {
+        cursorRing.style.left = `${targetX}px`;
+        cursorRing.style.top = `${targetY}px`;
+        animationFrame = 0;
+      }
+    };
 
     window.addEventListener('pointermove', (event) => {
-      cursorDot.style.left = `${event.clientX}px`;
-      cursorDot.style.top = `${event.clientY}px`;
-      cursorRing.style.left = `${event.clientX}px`;
-      cursorRing.style.top = `${event.clientY}px`;
+      targetX = event.clientX;
+      targetY = event.clientY;
+      cursorDot.style.left = `${targetX}px`;
+      cursorDot.style.top = `${targetY}px`;
+
+      if (!cursorInitialized) {
+        ringX = targetX;
+        ringY = targetY;
+        cursorRing.style.left = `${ringX}px`;
+        cursorRing.style.top = `${ringY}px`;
+        cursorInitialized = true;
+      }
+
+      if (!animationFrame) {
+        animationFrame = window.requestAnimationFrame(followPointer);
+      }
     });
 
     document.addEventListener('pointerover', (event) => {

@@ -27,5 +27,6 @@ http://localhost:3000
 - Replace `assets/sheraz-nadeem.png` with an updated photo, or change the image `src` in `index.html`.
 - Product cards are demo content and can be edited directly in `index.html`.
 - A trailing custom cursor appears on mouse/trackpad devices; touch devices use their native cursor behavior.
+- The hero tagline has a ripple animation, and the centered navigation includes a `#products` anchor.
 - Sections reveal as you scroll, and the bottom-right button tracks page progress and scrolls back to the top.
 - Animations respect the operating system's reduced-motion preference.
