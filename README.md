@@ -32,3 +32,4 @@ npm run preview
 - `assets/sheraz-nadeem.png` – profile photo
 
 The page includes a custom pointer animation, animated hero ripple, scroll reveal effects, responsive navigation, and reduced-motion support.
+# Portfolio-Sheraz-Nadeem
